@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Asad Ahmed | Student Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: white;
+      line-height: 1.6;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 8%;
+      background: #020617;
+      position: sticky;
+      top: 0;
+    }
+
+    nav h2 {
+      color: #38bdf8;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+    }
+
+    nav a:hover {
+      color: #38bdf8;
+    }
+
+    .hero {
+      min-height: 90vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 30px;
+    }
+
+    .hero h1 {
+      font-size: 55px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: #38bdf8;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: #cbd5e1;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #38bdf8;
+      color: #020617;
+      padding: 12px 25px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 70px 8%;
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 35px;
+      margin-bottom: 35px;
+      color: #38bdf8;
+    }
+
+    .about {
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+      color: #cbd5e1;
+      font-size: 18px;
+    }
+
+    .skills {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .skill {
+      background: #1e293b;
+      padding: 20px 30px;
+      border-radius: 10px;
+      border: 1px solid #334155;
+    }
+
+    .card {
+      max-width: 700px;
+      margin: auto;
+      background: #1e293b;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .card p {
+      color: #cbd5e1;
+      margin: 8px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 25px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .hero h1 {
+        font-size: 40px;
+      }
+
+      nav a {
+        margin: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>Asad Ahmed</h2>
+
+    <div>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <section class="hero">
+    <div>
+      <h1>Hi, I'm <span>Asad Ahmed</span></h1>
+      <p>Student | Microsoft Excel Learner | Future Professional</p>
+      <a href="#about" class="btn">Explore My Portfolio</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+
+    <div class="about">
+      <p>
+        Hello! My name is Asad Ahmed. I am a student from Karachi
+        currently completing my Intermediate education. I am interested
+        in learning computer skills and improving my professional abilities.
+        I am currently developing my skills in Microsoft Excel and other
+        useful digital tools.
+      </p>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>My Skills</h2>
+
+    <div class="skills">
+      <div class="skill">Microsoft Excel</div>
+      <div class="skill">Basic Computer Skills</div>
+      <div class="skill">Data Entry</div>
+      <div class="skill">Internet & Research</div>
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2>
+
+    <div class="card">
+      <h3>Intermediate</h3>
+      <p>Currently pursuing Intermediate education.</p>
+      <p>Karachi, Pakistan</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <div class="card">
+      <h3>Let's Connect</h3>
+      <p>📍 Karachi, Pakistan</p>
+      <p>📧 Email: Coming Soon</p>
+      <p>📱 Phone: Coming Soon</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Asad Ahmed. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>

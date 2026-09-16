@@ -1,224 +1,567 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Asad Ahmed | Student Portfolio</title>
+    <title>Asad Ahmed | Portfolio</title>
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+    <meta name="description"
+          content="Asad Ahmed - Personal Portfolio">
 
-    body {
-      background: #0f172a;
-      color: white;
-      line-height: 1.6;
-    }
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
 
-    nav {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 8%;
-      background: #020617;
-      position: sticky;
-      top: 0;
-    }
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #f8fafc;
+            line-height: 1.6;
+        }
 
-    nav h2 {
-      color: #38bdf8;
-    }
+        /* NAVBAR */
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 20px;
-    }
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0f172a;
+            border-bottom: 1px solid #1e293b;
+            z-index: 1000;
+        }
 
-    nav a:hover {
-      color: #38bdf8;
-    }
+        nav {
+            max-width: 1100px;
+            margin: auto;
+            padding: 18px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    .hero {
-      min-height: 90vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      padding: 30px;
-    }
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #38bdf8;
+        }
 
-    .hero h1 {
-      font-size: 55px;
-      margin-bottom: 10px;
-    }
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-    .hero h1 span {
-      color: #38bdf8;
-    }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
 
-    .hero p {
-      font-size: 20px;
-      color: #cbd5e1;
-      margin-bottom: 25px;
-    }
+        nav ul li a:hover {
+            color: #38bdf8;
+        }
 
-    .btn {
-      display: inline-block;
-      background: #38bdf8;
-      color: #020617;
-      padding: 12px 25px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+        /* SECTIONS */
 
-    section {
-      padding: 70px 8%;
-    }
+        section {
+            max-width: 1100px;
+            margin: auto;
+            padding: 100px 20px;
+        }
 
-    section h2 {
-      text-align: center;
-      font-size: 35px;
-      margin-bottom: 35px;
-      color: #38bdf8;
-    }
+        .section-title {
+            text-align: center;
+            font-size: 35px;
+            margin-bottom: 40px;
+            color: #38bdf8;
+        }
 
-    .about {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-      color: #cbd5e1;
-      font-size: 18px;
-    }
+        /* HOME */
 
-    .skills {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 20px;
-    }
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+        }
 
-    .skill {
-      background: #1e293b;
-      padding: 20px 30px;
-      border-radius: 10px;
-      border: 1px solid #334155;
-    }
+        .hero h1 {
+            font-size: 55px;
+            margin-bottom: 10px;
+        }
 
-    .card {
-      max-width: 700px;
-      margin: auto;
-      background: #1e293b;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-    }
+        .hero h1 span {
+            color: #38bdf8;
+        }
 
-    .card p {
-      color: #cbd5e1;
-      margin: 8px;
-    }
+        .hero h2 {
+            font-size: 27px;
+            color: #94a3b8;
+            margin-bottom: 20px;
+        }
 
-    footer {
-      text-align: center;
-      padding: 25px;
-      background: #020617;
-      color: #94a3b8;
-    }
+        .hero p {
+            max-width: 650px;
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
 
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        gap: 10px;
-      }
+        .btn {
+            display: inline-block;
+            background: #38bdf8;
+            color: #0f172a;
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-right: 10px;
+        }
 
-      .hero h1 {
-        font-size: 40px;
-      }
+        .btn:hover {
+            background: #7dd3fc;
+        }
 
-      nav a {
-        margin: 5px;
-      }
-    }
-  </style>
+        /* ABOUT */
+
+        .about {
+            max-width: 800px;
+            margin: auto;
+            text-align: center;
+            color: #cbd5e1;
+            font-size: 18px;
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill {
+            background: #1e293b;
+            padding: 25px;
+            text-align: center;
+            border-radius: 10px;
+            border: 1px solid #334155;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .skill:hover {
+            border-color: #38bdf8;
+            transform: translateY(-5px);
+            transition: 0.3s;
+        }
+
+        .skill-icon {
+            display: block;
+            font-size: 35px;
+            margin-bottom: 10px;
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+
+        .project h3 {
+            color: #38bdf8;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #cbd5e1;
+        }
+
+        /* EDUCATION */
+
+        .education {
+            max-width: 700px;
+            margin: auto;
+        }
+
+        .education-box {
+            background: #1e293b;
+            padding: 25px;
+            margin-bottom: 20px;
+            border-left: 4px solid #38bdf8;
+            border-radius: 5px;
+        }
+
+        .education-box h3 {
+            color: #38bdf8;
+            margin-bottom: 5px;
+        }
+
+        .education-box p {
+            color: #cbd5e1;
+        }
+
+        .status {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 5px 12px;
+            border-radius: 20px;
+            background: #334155;
+            color: #7dd3fc;
+            font-size: 14px;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin: 15px 0;
+            color: #cbd5e1;
+            font-size: 17px;
+        }
+
+        .contact a {
+            color: #38bdf8;
+            text-decoration: none;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #020617;
+            color: #94a3b8;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav ul {
+                gap: 12px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-  <nav>
-    <h2>Asad Ahmed</h2>
+<!-- NAVBAR -->
 
-    <div>
-      <a href="#about">About</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#contact">Contact</a>
+<header>
+    <nav>
+
+        <div class="logo">
+            Asad Ahmed
+        </div>
+
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </nav>
+</header>
+
+
+<!-- HOME -->
+
+<section id="home">
+
+    <div class="hero">
+
+        <h1>
+            Hi, I'm <span>Asad Ahmed</span>
+        </h1>
+
+        <h2>
+            Aspiring Software Developer
+        </h2>
+
+        <p>
+            I am passionate about technology and software development.
+            I am continuously learning new computer skills and
+            working towards building a career in the technology field.
+        </p>
+
+        <a href="#about" class="btn">
+            About Me
+        </a>
+
+        <a href="#contact" class="btn">
+            Contact Me
+        </a>
+
     </div>
-  </nav>
 
-  <section class="hero">
-    <div>
-      <h1>Hi, I'm <span>Asad Ahmed</span></h1>
-      <p>Student | Microsoft Excel Learner | Future Professional</p>
-      <a href="#about" class="btn">Explore My Portfolio</a>
-    </div>
-  </section>
+</section>
 
-  <section id="about">
-    <h2>About Me</h2>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <h2 class="section-title">
+        About Me
+    </h2>
 
     <div class="about">
-      <p>
-        Hello! My name is Asad Ahmed. I am a student from Karachi
-        currently completing my Intermediate education. I am interested
-        in learning computer skills and improving my professional abilities.
-        I am currently developing my skills in Microsoft Excel and other
-        useful digital tools.
-      </p>
-    </div>
-  </section>
 
-  <section id="skills">
-    <h2>My Skills</h2>
+        <p>
+            My name is Asad Ahmed. I have completed my Intermediate
+            education and I am currently studying a CIT & Foundation
+            course to improve my computer and technical skills.
+
+            I also have skills in MS Excel and I am interested in
+            software development, programming and learning modern
+            technologies.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- SKILLS -->
+
+<section id="skills">
+
+    <h2 class="section-title">
+        My Skills
+    </h2>
 
     <div class="skills">
-      <div class="skill">Microsoft Excel</div>
-      <div class="skill">Basic Computer Skills</div>
-      <div class="skill">Data Entry</div>
-      <div class="skill">Internet & Research</div>
+
+        <div class="skill">
+            <span class="skill-icon">📊</span>
+            MS Excel
+        </div>
+
+        <div class="skill">
+            <span class="skill-icon">💻</span>
+            Basic Computer Skills
+        </div>
+
+        <div class="skill">
+            <span class="skill-icon">🖥️</span>
+            CIT & Foundation
+        </div>
+
+        <div class="skill">
+            <span class="skill-icon">🌐</span>
+            Basic Web Development
+        </div>
+
+        <div class="skill">
+            <span class="skill-icon">☕</span>
+            Java — Learning
+        </div>
+
+        <div class="skill">
+            <span class="skill-icon">📚</span>
+            Continuous Learning
+        </div>
+
     </div>
-  </section>
 
-  <section id="education">
-    <h2>Education</h2>
+</section>
 
-    <div class="card">
-      <h3>Intermediate</h3>
-      <p>Currently pursuing Intermediate education.</p>
-      <p>Karachi, Pakistan</p>
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <h2 class="section-title">
+        My Projects
+    </h2>
+
+    <div class="projects">
+
+        <div class="project">
+
+            <h3>
+                Personal Portfolio
+            </h3>
+
+            <p>
+                A responsive personal portfolio website created
+                using HTML and CSS and hosted on GitHub Pages.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                MS Excel Practice
+            </h3>
+
+            <p>
+                Practicing spreadsheets, formulas, data organization
+                and basic Excel functions.
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                Java Learning
+            </h3>
+
+            <p>
+                Currently learning Java programming and building
+                small practice projects to improve programming skills.
+            </p>
+
+        </div>
+
     </div>
-  </section>
 
-  <section id="contact">
-    <h2>Contact Me</h2>
+</section>
 
-    <div class="card">
-      <h3>Let's Connect</h3>
-      <p>📍 Karachi, Pakistan</p>
-      <p>📧 Email: Coming Soon</p>
-      <p>📱 Phone: Coming Soon</p>
+
+<!-- EDUCATION -->
+
+<section id="education">
+
+    <h2 class="section-title">
+        Education
+    </h2>
+
+    <div class="education">
+
+        <div class="education-box">
+
+            <h3>
+                Intermediate
+            </h3>
+
+            <p>
+                Intermediate education completed.
+            </p>
+
+            <span class="status">
+                Completed
+            </span>
+
+        </div>
+
+
+        <div class="education-box">
+
+            <h3>
+                CIT & Foundation Course
+            </h3>
+
+            <p>
+                Currently studying CIT & Foundation to improve
+                computer and technical skills.
+            </p>
+
+            <span class="status">
+                Currently Learning
+            </span>
+
+        </div>
+
     </div>
-  </section>
 
-  <footer>
-    <p>© 2026 Asad Ahmed. All Rights Reserved.</p>
-  </footer>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <h2 class="section-title">
+        Contact Me
+    </h2>
+
+    <div class="contact">
+
+        <p>
+            📱 Phone:
+            <a href="tel:03322403576">
+                03322403576
+            </a>
+        </p>
+
+        <p>
+            📧 Email:
+            <a href="mailto:asadkhan08282@gmail.com">
+                asadkhan08282@gmail.com
+            </a>
+        </p>
+
+        <p>
+            🌐 Portfolio:
+            <a href="https://asadahmed0044.github.io/" target="_blank">
+                asadahmed0044.github.io
+            </a>
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <p>
+        © 2026 Asad Ahmed. All Rights Reserved.
+    </p>
+
+</footer>
 
 </body>
 </html>
+```
